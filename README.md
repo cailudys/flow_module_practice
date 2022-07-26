@@ -10,6 +10,8 @@ flow 是 JavaScript 的静态类型检查器。弥补了一些 JavaScript 类型
 
 ###### 类型注解的使用
 
+> 类型注解只是用于在编码阶段帮我们找出代码问题的，仅此而已
+
 ```js
 // 表示这个sum函数只能接受 两个 mumber 类型的数值；如果传入其他类型，会直接在编辑器里标红提示（语法层面提示）
 function sum ( a`: number`, b `: number`) {
@@ -33,3 +35,12 @@ flow 并不要求我们给每一个变量都加上类型注解。
 
 5. 使用 `yarn flow init ` 初始化一个flow的配置文件，之后可以在终端中使用`yarn flow`命令执行代码检查，检查结果还是输出在终端中。
 
+# Flow编译移除注解
+
+类型注解并不是JavaScript的标准语法，所以造成我们添加了类型注解之后的JavaScript代码是没有办法正确运行的。所以我们要使用某种编码工具，在编码时自动移除掉类型注解。
+
+要移除Flow类型注解现在有两种解决方案：
+
+1. 使用Flow官方的 `flow-remove-types` 模块 `yarn add flow-remove-types --dev`
+
+   在终端中执行 `yarn flow-remove-types . -d dist` 命令 即可把当前目录下所有匹配到的文件，复制一份到dist目录下并且移除类型注解

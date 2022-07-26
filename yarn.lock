@@ -6,3 +6,34 @@ flow-bin@^0.183.0:
   version "0.183.0"
   resolved "https://registry.npmmirror.com/flow-bin/-/flow-bin-0.183.0.tgz#17f37c94edd04b705a897b5890dd6cdc02e0c94e"
   integrity sha512-7IJHUnMPYgNEZU8t9M4vJII/G+fJft9C/INm2+HRSXx5KDF2j+vD2iap6+Yg2FWgXTnNLUvk7kr1QdO5Fk/8/Q==
+
+flow-parser@^0.183.0:
+  version "0.183.0"
+  resolved "https://registry.npmmirror.com/flow-parser/-/flow-parser-0.183.0.tgz#69bcd35608ef179c619df0036c2b61d0f84665ae"
+  integrity sha512-2e/aIZIM7iJpHCBxpqdXetYYoO3YQEJzA7M8v5bhWhXCu+lIfkeSfOWycWW0rhlnJyjMftbmwn6B2eenKeGlag==
+
+flow-remove-types@^2.183.0:
+  version "2.183.0"
+  resolved "https://registry.npmmirror.com/flow-remove-types/-/flow-remove-types-2.183.0.tgz#3c1f8d247e8fa34e207a0a246dcba8065ebaf07d"
+  integrity sha512-hWaRTfRYX4Cm4CHEjRATmxg01Pe+KPNkGx/O3L1XLCQPh3v/W1QiqV7vB1B884KImdfzpXgz5gL4sRf2k808rw==
+  dependencies:
+    flow-parser "^0.183.0"
+    pirates "^3.0.2"
+    vlq "^0.2.1"
+
+node-modules-regexp@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz#8d9dbe28964a4ac5712e9131642107c71e90ec40"
+  integrity sha512-JMaRS9L4wSRIR+6PTVEikTrq/lMGEZR43a48ETeilY0Q0iMwVnccMFrUM1k+tNzmYuIU0Vh710bCUqHX+/+ctQ==
+
+pirates@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmmirror.com/pirates/-/pirates-3.0.2.tgz#7e6f85413fd9161ab4e12b539b06010d85954bb9"
+  integrity sha512-c5CgUJq6H2k6MJz72Ak1F5sN9n9wlSlJyEnwvpm9/y3WB4E3pHBDT2c6PEiS1vyJvq2bUxUAIu0EGf8Cx4Ic7Q==
+  dependencies:
+    node-modules-regexp "^1.0.0"
+
+vlq@^0.2.1:
+  version "0.2.3"
+  resolved "https://registry.npmmirror.com/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
+  integrity sha512-DRibZL6DsNhIgYQ+wNdWDL2SL3bKPlVrRiBqV5yuMm++op8W4kGFtaQfCs4KEJn0wBZcHVHJ3eoywX8983k1ow==
