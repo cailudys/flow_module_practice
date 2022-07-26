@@ -1,0 +1,10 @@
+{
+  "name": "flow_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "cailu <cailudys@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "flow-bin": "^0.183.0"
+  }
+}
