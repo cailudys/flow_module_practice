@@ -21,10 +21,15 @@ function sum ( a`: number`, b `: number`) {
 
 flow 并不要求我们给每一个变量都加上类型注解。
 
-## 上手 flow
+## 项目中使用flow的流程
 
-flow 是以npm模块的方式去工作的
+1. flow 是以npm模块的方式去工作的，所以我们使用 `yarn init --yes`命令初始化一个`package.json `用来管理我们的依赖
 
-所以我们使用 `yarn init --yes`命令初始化一个`package.json `用来管理我们的依赖
+2. 使用  `yarn add flow-bin --dev` 命令，安装开发依赖 （因为只有开发过程有用到 flow）
 
-使用  `yarn add flow-bin --dev` 命令，安装开发依赖 （因为只有开发过程有用到 flow）
+3. 在js文件中使用flow，需要在文件第一行加上  `// @flow` ,这样flow这个模块才会检查这个文件。
+
+4. 但是这样设置之后，加了类型注解之后，发现代码还是有标红，这是因为vscode有自动的JavaScript代码校验规则，JavaScript代码校验规则事不支持类型注解这样的写法的。所以我们要关闭JavaScript代码校验规则。 `设置 -> javascript validate  `
+
+5. 使用 `yarn flow init ` 初始化一个flow的配置文件，之后可以在终端中使用`yarn flow`命令执行代码检查，检查结果还是输出在终端中。
+
