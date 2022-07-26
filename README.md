@@ -43,4 +43,20 @@ flow 并不要求我们给每一个变量都加上类型注解。
 
 1. 使用Flow官方的 `flow-remove-types` 模块 `yarn add flow-remove-types --dev`
 
-   在终端中执行 `yarn flow-remove-types . -d dist` 命令 即可把当前目录下所有匹配到的文件，复制一份到dist目录下并且移除类型注解
+   在终端中执行 `yarn flow-remove-types . -d dist` 命令 即可把当前目录下所有匹配到的文件，复制一份到dist目录下并且移除类型注解。
+
+2. 使用babel 配合一个`@babel/preset-flow`插件来移除类型注解。
+
+   2.1 安装开发依赖：  `yarn add @babel/core @babel/cli @babel/preset-flow --dev`
+
+   2.2 .babelrc文件需要自己手动创建。
+
+   ```apl
+   // .babelrc 中的配置
+   {
+     "presets": ["@babel/preset-flow"]
+   }
+   ```
+
+   2.3 在终端中执行 `yarn babel src -d dist` 就可以将src中的js文件，编译一份到dist目录中。
+
